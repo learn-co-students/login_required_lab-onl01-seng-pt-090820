@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   get '/new', to: "sessions#new", as: "new"
   post '/sessions', to: "sessions#create"
   post "/", to: "sessions#destroy"
+
+  get "/secrets", to: "secrets#show"
 end

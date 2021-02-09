@@ -10,7 +10,6 @@ class SessionsController < ApplicationController
         end
     end
     def destroy
-        binding.pry
         session.clear
     end
 end

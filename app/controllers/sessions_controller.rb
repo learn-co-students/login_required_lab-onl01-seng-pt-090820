@@ -1,6 +1,7 @@
 class SessionsController < ApplicationController
     def new
     end
+    
     def create
         if params[:name].blank?
             redirect_to new_path
@@ -9,7 +10,10 @@ class SessionsController < ApplicationController
             redirect_to '/'
         end
     end
+
     def destroy
         session.clear
+        # redirect_to root
+        render :"application/welcome"
     end
 end
